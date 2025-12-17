@@ -8,16 +8,20 @@
 
 body {
     min-height: 100vh;
-    background: radial-gradient(ellipse at top, #2a1b3d, #0b0a12);
+    background: linear-gradient(
+        180deg,
+        #ffe6f0 0%,
+        #ffd6e8 50%,
+        #ffc7df 100%
+    );
     font-family: -apple-system, BlinkMacSystemFont,
                  "SF Pro Display", "SF Pro Text",
                  "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #ffffff;
+    color: #2b2b2b;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .container {
     width: 100%;
     max-width: 900px;
