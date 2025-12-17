@@ -1,48 +1,74 @@
+/* Общие стили */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #ffd6e0;
+    color: #333;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 main {
     padding: 20px;
+    max-width: 700px;
 }
 
 p {
-    font-size: 1.2rem;
-    max-width: 600px;
-    margin: auto;
-}
-
-.button, button {
-    background-color: #ff99b3;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 8px;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000;
-    display: inline-block;
-    margin-top: 15px;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 20px auto;
 }
 
 .hidden-text {
     display: none;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 
-/* Адаптивность */
+/* Кнопки */
+.button, button {
+    background-color: #ff99b3;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.button:hover, button:hover {
+    background-color: #ff7aa5;
+    transform: scale(1.1);
+}
+
+/* Адаптивный текст */
 @media (max-width: 768px) {
-    p { font-size: 1rem; }
-    .button, button { font-size: 1rem; padding: 8px 16px; }
+    p {
+        font-size: 1.2rem;
+    }
+    .button, button {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
 }
 
 @media (min-width: 1024px) {
-    p { font-size: 1.3rem; }
+    p {
+        font-size: 1.5rem;
+    }
+    .button, button {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
 }
