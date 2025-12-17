@@ -1,8 +1,7 @@
-/* Общие стили */
 body {
     margin: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #ffd6e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffd6e0;
     color: #333;
     text-align: center;
     display: flex;
@@ -17,8 +16,8 @@ main {
 }
 
 p {
-    font-size: 1.4rem;
-    line-height: 1.6;
+    font-size: 1.5rem;
+    line-height: 1.7;
     margin: 20px auto;
 }
 
@@ -53,7 +52,7 @@ p {
     height: 40%;
 }
 
-/* Адаптивный текст */
+/* Адаптивность */
 @media (max-width: 768px) {
     p { font-size: 1.2rem; }
     .button, button { width: 50px; height: 50px; }
@@ -61,6 +60,6 @@ p {
 }
 
 @media (min-width: 1024px) {
-    p { font-size: 1.5rem; }
+    p { font-size: 1.6rem; }
     .button, button { width: 70px; height: 70px; }
 }
