@@ -5,55 +5,116 @@
 }
 
 body {
-    background: #0f0f14;
-    color: #ffffff;
-    font-family: 'Arial', sans-serif;
     min-height: 100vh;
+    background: radial-gradient(ellipse at top, #2a1b3d, #0b0a12);
+    font-family: -apple-system, BlinkMacSystemFont,
+                 "SF Pro Display", "SF Pro Text",
+                 "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container {
+    width: 100%;
+    max-width: 900px;
+    padding: 40px 24px;
     text-align: center;
-    max-width: 800px;
-    padding: 20px;
+    animation: fadeIn 1.2s ease;
 }
 
+/* ТЕКСТ */
 .text {
-    font-size: 26px;
-    line-height: 1.5;
-    margin-bottom: 30px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: textAppear 1.3s ease forwards;
 }
 
+/* ПК */
+@media (min-width: 769px) {
+    .text {
+        font-size: 34px;
+    }
+}
+
+/* МОБИЛЬНЫЕ */
+@media (max-width: 768px) {
+    .text {
+        font-size: 26px;
+    }
+}
+
+/* СТРЕЛКА */
 .arrow-btn {
     display: inline-block;
-    font-size: 26px;
+    font-size: 34px;
     text-decoration: none;
-    color: #fff;
-    border: 1px solid #fff;
-    border-radius: 50%;
-    width: 45px;
-    height: 45px;
-    line-height: 43px;
-    transition: 0.3s;
+    color: #ffb6d9;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .arrow-btn:hover {
-    background: #fff;
-    color: #000;
+    transform: translateX(6px);
+    color: #ffd1ea;
 }
 
+/* СЕРДЦА */
 .heart-btn {
     background: none;
     border: none;
-    font-size: 28px;
+    font-size: 32px;
     cursor: pointer;
-    margin: 10px 0;
+    margin: 14px 0;
+    transition: transform 0.3s ease;
 }
 
+.heart-btn:hover {
+    transform: scale(1.2);
+}
+
+/* СКРЫТЫЙ ТЕКСТ */
 .hidden-text {
     display: none;
-    margin-top: 10px;
     font-size: 22px;
+    margin-bottom: 12px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+/* МОБИЛЬНЫЙ ТЕКСТ В РАСКРЫТИИ */
+@media (max-width: 768px) {
+    .hidden-text {
+        font-size: 20px;
+    }
+}
+
+/* АНИМАЦИИ */
+@keyframes fadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes textAppear {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
