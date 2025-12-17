@@ -1,11 +1,5 @@
-function toggleText(id, btn) {
+function showText(id, btn) {
     const text = document.getElementById(id);
-
-    if (text.style.display === "block") {
-        text.style.display = "none";
-        btn.style.display = "inline-block";
-    } else {
-        text.style.display = "block";
-        btn.style.display = "none";
-    }
+    btn.style.display = "none";
+    text.style.display = "block";
 }
